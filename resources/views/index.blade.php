@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>Personal - Start Bootstrap Theme</title>
+
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon"
+            href="assets/favicon-posproperti.png" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+            rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+            rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/yourcode.js"
+            crossorigin="anonymous"></script>
+        <script
+        src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+        <script>
+    function formValidation() {
+        var name = document.getElementById("name").Value;
+        var email = document.getElementById("email").Value;
+        var phone = document.getElementById("phone").Value;
+        var message = document.getElementById("message").Value;
+
+        // Nama gak boleh karakter
+        var  nameValidation = name.trim()
+        if (!/^[a-zA-Z ]+$/.test(nameValidation)) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer: '<a href="#">Why do I have this issue?</a>'
+        });
+        return false;
+
+
+
+    // Validasi email
+    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
+        Swal.fire({
+            title: "Pesan Kesalahan",
+            text: "Email tidak valid",
+            icon: "error"
+        });
+        return false;
+    }
+
+    // Validasi nomor telepon: hanya angka dan minimal 10 digit
+    if (!/^\d{10,}$/.test(phone)) {
+        Swal.fire({
+            title: "Pesan Kesalahan",
+            text: "Nomor telepon tidak valid. Hanya angka dan minimal 10 digit",
+            icon: "error"
+        });
+        return false;
+    }
+
+
+    // Validasi pesan: minimal 10 karakter
+    if (message.length < 10) {
+        Swal.fire({
+            title: "Pesan Kesalahan",
+            text: "Pesan minimal 10 karakter",
+            icon: "error"
+        });
+        return false;
+    }
+
+    Swal.fire({
+        title: "Sukses!",
+        text: "Pesan Anda telah terkirim",
+        icon: "success",
+        confirmButtonText: "OK"
+    });
+    return true;
+
+    }
+
+}
+        </script>
+
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3"
+                style="position:sticky; top:0; z-index:100;">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span
+                            class="fw-bolder text-primary"> <img
+                                src="assets/navbar-logo.png"
+                                width="200px"></span></a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                        id="navbarSupportedContent">
+                        <ul
+                            class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="#tentang-kami">Tentang Kami</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#visi-misi">Visi Misi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#pilar-perusahaan">Pilar Perusahaan</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#kontak">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="jumbotron" id="tentang-kami"
+                style=" background-image: url('assets/img1.png'); position: sticky;">
+                <h1 class="display-4 "
+                    style="color: white; text-align: center; ">Tentang
+                    kami </h1>
+
+                <hr class="my-4">
+                <p style="color: white; text-align: center;">PT Pos Properti
+                    Indonesia memiliki 5
+                    (lima) Bisnis Properti:
+                    Building Management | Property Leasing | Hospitality | Real
+                    Estate Development | Design & Construction.</p>
+                <br>
+                <br>
+                <br>
+            </div>
+            <!-- Header-->
+            <header class="py-5" id="visi-misi">
+                <div class="container px-5 pb-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-xxl-5">
+                            <!-- Header text content-->
+                            <div
+                                class="text-center text-xxl-start text-sm-start"
+                                style="text-align: center;  ">
+                                <h2 style="font-weight: bold; text-align: center;"> Komitmen Kami
+                                    Untuk Merealisasikan Rencana
+                                    Anda </h2>
+                                <h3> Visi</h3>
+                                <p> Menjadi jenama properti terpilih dan paling
+                                    menguntungkan di Indonesia. </p>
+
+                                <br>
+                                <h5> Misi </h5>
+
+                                <ol>
+                                    <li>Menyediakan produk & layanan yang
+                                        berkualitas, inovatif serta
+                                        berkelanjutan di seluruh Indonesia.</li>
+                                    <li>Menjalankan proses bisnis berbasis
+                                        teknologi terbaru didukung SDM yang
+                                        kompeten dan berintegritas.</li>
+                                    <li>Menyelaraskan strategi korporasi dengan
+                                        induk perusahaan untuk memberikan
+                                        kontribusi dan nilai tambah yang optimal
+                                        bagi seluruh pemangku kepentingan</li>
+                                    <li>Berkomitmen terhadap tanggung jawab
+                                        sosial, lingkungan, dan tata kelola
+                                        perusahaan yang baik serta terintegrasi
+                                        dalam seluruh aktifitas perusahaan.</li>
+
+                                </ol>
+
+                            </div>
+                        </div>
+                        <div class="col-xxl-7">
+                            <!-- Header profile picture-->
+                            <div
+                                class="d-flex justify-content-center mt-5 mt-xxl-0">
+                                <div
+                                    class=" bg-gradient-primary-to-secondary">
+                                    <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
+                                    <!-- Watch a tutorial on how to do this on YouTube (link)-->
+                                    <img class="profile-img"
+                                        src="assets/posbloc-sby.jpeg"
+                                        style="width: 300px; height: 400px; border-radius: 50px; align-items: center;" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- pilarf perushaaan-->
+            <section class="bg-light py-5" id="pilar-perusahaan">
+                <h1 style="text-align: center; font-weight: bold;">Pilar Perushaan </h1>
+
+                <div class="container px-5 py-5" style>
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+
+                        <!--Kolom 1 -->
+                        <div class="col">
+
+                            <span class="fa-stack fa-4x"
+
+                                style="background-color: #f6f7ff; border-radius: 20px; box-shadow: 0cqmin;">
+
+                                <img src="assets/bertanggung-jawab.png"
+                                    width="100px" style="align-items: center;">
+                                <h4 class="my-3"> Teknologi & Operasi</h4>
+                                <div style="text-align: left; color: black;" >
+                                    <ul>
+                                        <li>Integrasi sistem perusahaan berbasis
+                                            teknologi dan otomasi terkini</li>
+                                        <li>Standar operasi yang tinggi untuk proses
+                                            bisnis yang efektif & efisien</li>
+                                        <li>Manajemen data yang terintegrasi secara
+                                            akurat dalam pengambilan keputusan</li>
+                                        <li>Gedung pintar, ramah lingkungan, dan
+                                            terhubung</li>
+                                        <li>Ketahanan operasional bisnis melalui
+                                            penerapan keamanan fisik, siber, dan rencana
+                                            keberlangsungan bisnis</li>
+                                    </ul>
+                                </div>
+                            </span>
+                        </div>
+                        <!--Kolom 2 -->
+                        <div class="col">
+
+                            <span class="fa-stack fa-4x"
+                                style="background-color: #f6f7ff; border-radius: 20px; box-shadow: 0cqmin;">
+                                <img src="assets/inisiatif.png"
+                                    width="70px" style="align-items: center;">
+                            </span>
+                            <h4 class="my-3">Teknologi & Operasi</h4>
+                            <div style="text-align: left;">
+                                <ul class="card-text">
+                                    <li style="text-align: left">Kesejahteraan,
+                                        kesehatan, dan keselamatan</li><li
+                                        style="text-align: left">Keragaman,
+                                        kesetaraan, dan inklusi</li><li
+                                        style="text-align: left">Pembelajaran dan
+                                        Pengembangan</li><li
+                                        style="text-align: left">Manajemen
+                                        talenta<br></li></ul>
+                            </div>
+
+
+                        </div>
+                        <!--Kolom 3 -->
+                        <div class="col">
+                            <span class="fa-stack fa-4x"
+                                style="background-color: #f6f7ff; border-radius: 20px; box-shadow: 0cqmin;">
+                                <img src="assets/bertanggung-jawab.png"
+                                    width="100px" style="align-items: center;">
+                            </span>
+                            <h4 class="my-3"> Manajemen SDM</h4>
+                            <ul>
+                                <li>Integrasi sistem perusahaan berbasis
+                                    teknologi dan otomasi terkini</li>
+                                <li>Standar operasi yang tinggi untuk proses
+                                    bisnis yang efektif & efisien</li>
+                                <li>Manajemen data yang terintegrasi secara
+                                    akurat dalam pengambilan keputusan</li>
+                                <li>Gedung pintar, ramah lingkungan, dan
+                                    terhubung</li>
+                                <li>Ketahanan operasional bisnis melalui
+                                    penerapan keamanan fisik, siber, dan
+                                    rencana
+                                    keberlangsungan bisnis</li>
+                            </ul>
+                        </div>
+                        <!--Kolom 4 -->
+                        <div class="col">
+                            <span class="fa-stack fa-4x"
+                                style="background-color: #f6f7ff; border-radius: 20px; box-shadow: 0cqmin;">
+                                <img src="assets/bertanggung-jawab.png"
+                                    width="100px" style="align-items: center;">
+                            </span>
+                            <h4 class="my-3"> Risiko & Pengendalian</h4>
+                            <ul>
+                                <li>Tata Kelola dan Kepatuhan</li>
+                                <li>Laporan Keuangan yang akuntabel</li>
+                                <li>Manajemen data yang terintegrasi secara
+                                    akurat dalam pengambilan keputusan</li>
+                                <li>Budaya manajemen risiko</li>
+                                <li>Pengawasan internal yang kuat di seluruh lini bisnis dan operasi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+
+
+            <!-- Contak -->
+            <section class="py-5" id="kontak">
+                <div class="container px-5">
+                    <!-- Contact form-->
+                    <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                        <div class="text-center mb-5">
+                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                            <h1 class="fw-bolder">Hubungi Kami</h1>
+                            <p class="lead fw-normal text-muted mb-0">Anda dapat memberikan pesan untuk keperluan ataupun pertanyaan dibawah ini</p>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <!-- * * * * * * * * * * * * * * *-->
+                                <!-- * * SB Forms Contact Form * *-->
+                                <!-- * * * * * * * * * * * * * * *-->
+                                <!-- This form is pre-integrated with SB Forms.-->
+                                <!-- To make this form functional, sign up at-->
+                                <!-- https://startbootstrap.com/solution/contact-forms-->
+                                <!-- to get an API token!-->
+                                <form id="contactForm" action="https://google.co.id" method="get"   onsubmit="return formValidation();">
+                                    <!-- Name input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                        <label for="name">Full name</label>
+                                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                    </div>
+                                    <!-- Email address input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                        <label for="email">Email address</label>
+                                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                    </div>
+                                    <!-- Phone number input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                        <label for="phone">Phone number</label>
+                                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                    </div>
+                                    <!-- Message input-->
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <label for="message">Message</label>
+                                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                    </div>
+                                    <!-- Submit success message-->
+                                    <!---->
+                                    <!-- This is what your users will see when the form-->
+                                    <!-- has successfully submitted-->
+                                    <div class="d-none" id="submitSuccessMessage">
+                                        <div class="text-center mb-3">
+                                            <div class="fw-bolder">Form submission successful!</div>
+                                            To activate this form, sign up at
+                                            <br />
+                                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                        </div>
+                                    </div>
+                                    <!-- Submit error message-->
+                                    <!---->
+                                    <!-- This is what your users will see when there is-->
+                                    <!-- an error submitting the form-->
+                                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                                    <!-- Submit Button-->
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section bg-light" id="team">
+                <br>
+                <h1 class="text-center" style="font-weight: bold;">TEAM</h1>
+               <br>
+               <br>
+                <div class="text-center ">
+                    <img src="assets/director.jpg" height="200px" width="200px" style="border-radius: 50%; align-items: center; margin-bottom: 20px;">
+                    <h4 class="section-heading " style="font-weight: bold;">Direksi</h4>
+                    <h6> Junita Roemi</h6>
+
+                </div>
+                <br>
+                <br>
+
+                <div class="container ">
+                    <div class="row">
+                      <div class="col-sm text-center">
+                       <img src="assets/cmo.jpg" height="200px" width="200px" style="border-radius: 50%; align-items: center; margin-bottom: 20px;">
+                        <h4 > Chief Marketing Officer</h4>
+                        <h6>Endro Tjahjono</h6>
+                      </div>
+                      <div class="col-sm text-center">
+                        <img src="assets/cfo.jpg" height="200px" width="200px" style="border-radius: 50%; align-items: center; margin-bottom: 20px;">
+                        <h4 >Chief Financial Officer</h4>
+                        <h6>Nina Risnasari</h6>
+                      </div>
+                      <div class="col-sm text-center">
+                        <img src="assets/coo.jpg" height="200px" width="200px" style="border-radius: 50%; align-items: center; margin-bottom: 20px;">
+                        <h4 >Chief Operating Officer</h4>
+                        <h6>Abdul Hadi</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+<br>
+
+            </section>
+
+
+
+
+
+        </main>
+        <!-- Footer-->
+        <footer class="py-4 mt-auto" style="background-color: #274C83;">
+            <div class="container px-5">
+                <div
+                    class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0" style="color: white"> PT Pos Properti Indonesia
+                            Jl Banda No. 30 Bandung Jawa Barat, 40115 Indonesia</div></div>
+                    <div class="col-auto">
+                        <a class="small" href="#!"  style="color: white"> 022-4212515 </a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!"  style="color: white">info@posproperti.co.id</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!"  style="color: white">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
