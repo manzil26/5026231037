@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Link;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\BlogController;
+
 
 // yang komen ini java
 // import java.io;
@@ -13,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('frontend', function () {
-    return view('frontend');
-});
+
 
 //Membuat Route Baru Laravel
 Route::get('halo', function () {
@@ -38,10 +38,16 @@ Route::get('hello', [Link::class, 'helloword']);
 //ksi yang dilakukan saat URI /pertama diakses.
 //Factory ini bertanggung jawab untuk membuat objek view dari file .blade.php di folder resources/views.  Laravel akan mencari file: resources/views/pertama.blade.php
 
+//default
 Route::get('pertama', function () {
     return view('pertama');
 });
 
+
+//route untuk frontend blade
+Route::get('frontend', function () {
+    return view('frontend');
+});
 Route::get(
     'boostrap1',
     function () {
@@ -87,3 +93,19 @@ Route::get('template1', function () {
 Route::get('index', function () {
     return view('index');
 });
+
+
+//route Link
+Route::get('dosen', [Link::class, 'index']);
+
+
+// route pegawai controller
+Route::get('pegawai/{nama}', [PegawaiController::class, 'index']);
+Route::get('/formulir', [PegawaiController::class, 'formulir']);
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+
+
+//route blog
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/blog/tentang', [BlogController::class, 'tentang']);
+Route::get('/blog/kontak', [BlogController::class, 'kontak']);
