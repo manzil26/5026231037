@@ -20,35 +20,59 @@
 </head>
 
 <body>
-    <div class="jumbotron text-center mx-auto">
-        <h1>5026231037 : Al-khiqmah Manzilatul Mukaromah</h1>
-    </div>
 
-    <nav class="navbar navbar-expand-sm bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm p-3 w-100">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">All Front End</a>
+                <a class="nav-link" href="frontend">All Front End</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/pegawai">Pegawai</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tugas CRUD</a>
+                <a class="nav-link" href="/penggaris">Tugas CRUD</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">EAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 1</a>
+                <a class="nav-link" href="/blog">Latihan 1</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 2</a>
+                <a class="nav-link" href="/penggaris">Latihan 2</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Latihan 3</a>
             </li>
         </ul>
     </nav>
+
+
+    <div class="jumbotron jumbotron-fluid"
+        style="background-image: url('material/bg-jumbotroon-frontend.png');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 100%;
+    padding: 60px 15px;">
+
+
+
+        <div class="container text-center">
+
+            <h1 class="display-4 justif text-center"
+                style="color: #491e21; font-bold; font-family: 'Poetsen One', serif;  font-weight: 400;">5026231037 :
+                Al-khiqmah Manzilatul M.
+            </h1>
+
+
+
+            </p>
+        </div>
+    </div>
     <br>
     <div class="container">
         @yield('content')

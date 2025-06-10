@@ -5,6 +5,8 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 //use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PenggarisController;
+
 
 
 // yang komen ini java
@@ -100,6 +102,11 @@ Route::get('blogs', function () {
 });
 
 
+Route::get('template', function () {
+    return view('template');
+});
+
+
 //route Link
 Route::get('dosen', [Link::class, 'index']);
 
@@ -124,3 +131,12 @@ Route::get('/pegawai/edit/{pegawai_id}', [PegawaiController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{pegawai_id}', [PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
+
+//tugas tabel penggaris
+Route::get('/penggaris', [PenggarisController::class, 'index_3']);
+Route::get('/penggaris/penggaris-tambah', [PenggarisController::class, 'tambah']);
+Route::post('/penggaris/store', [PenggarisController::class, 'store']);
+Route::get('/penggaris/penggaris-edit/{penggaris_id}', [PenggarisController::class, 'edit']);
+Route::post('/penggaris/update', [PenggarisController::class, 'update']);
+Route::get('/penggaris/hapus/{pegawai_id}', [PenggarisController::class, 'hapus']);
+Route::get('/penggaris/cari', [PenggarisController::class, 'cari']);
