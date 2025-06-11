@@ -5,7 +5,9 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 //use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\keranjangbelanjaController;
 use App\Http\Controllers\PenggarisController;
+
 
 
 
@@ -140,3 +142,10 @@ Route::get('/penggaris/penggaris-edit/{penggaris_id}', [PenggarisController::cla
 Route::post('/penggaris/update', [PenggarisController::class, 'update']);
 Route::get('/penggaris/hapus/{pegawai_id}', [PenggarisController::class, 'hapus']);
 Route::get('/penggaris/cari', [PenggarisController::class, 'cari']);
+
+
+// keranjang belanja
+Route::get('/keranjangbelanja', [keranjangbelanjaController::class, 'index_4']);
+Route::get('/keranjangbelanja/keranjang-tambah', [keranjangbelanjaController::class, 'keranjangtambah']);
+Route::post('/keranjangbelanja/store', [keranjangbelanjaController::class, 'store']);
+Route::get('/keranjangbelanja/hapus/{id}', [keranjangbelanjaController::class, 'hapus']);
