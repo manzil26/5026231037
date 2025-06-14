@@ -16,28 +16,31 @@
 
 
     <br />
+    <div class="table-responsive">
+        <table class="table table-striped"> <!-- setiap row ganjil genap berbeda warna-->
+            <thead class="thead" style="background-color: #FFD586">
+                <tr>
+                    <th>Nama</th>
+                    <th>Jabatan</th>
+                    <th>Umur</th>
+                    <th>Alamat</th>
+                    <th>Opsi</th>
+                </tr>
+            </thead>
+            @foreach ($pegawai as $p)
+                <tr>
+                    <td>{{ $p->pegawai_nama }}</td>
+                    <td>{{ $p->pegawai_jabatan }}</td>
+                    <td>{{ $p->pegawai_umur }}</td>
+                    <td>{{ $p->pegawai_alamat }}</td>
+                    <td>
+                        <a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-success">Edit</a>
+                        <a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger">Hapus</a>
+                    </td>
+                </tr>
+            @endforeach
 
-    <table class="table table-striped"> <!-- setiap row ganjil genap berbeda warna-->
-        <tr>
-            <th>Nama</th>
-            <th>Jabatan</th>
-            <th>Umur</th>
-            <th>Alamat</th>
-            <th>Opsi</th>
-        </tr>
-        @foreach ($pegawai as $p)
-            <tr>
-                <td>{{ $p->pegawai_nama }}</td>
-                <td>{{ $p->pegawai_jabatan }}</td>
-                <td>{{ $p->pegawai_umur }}</td>
-                <td>{{ $p->pegawai_alamat }}</td>
-                <td>
-                    <a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-success">Edit</a>
-                    <a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger">Hapus</a>
-                </td>
-            </tr>
-        @endforeach
-
-    </table>
+        </table>
+    </div>
     {{ $pegawai->links() }}
 @endsection

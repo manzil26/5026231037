@@ -7,7 +7,8 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\keranjangbelanjaController;
 use App\Http\Controllers\PenggarisController;
-
+use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\KeranjangbelanjaController2;
 
 
 
@@ -149,3 +150,19 @@ Route::get('/keranjangbelanja', [keranjangbelanjaController::class, 'index_4']);
 Route::get('/keranjangbelanja/keranjang-tambah', [keranjangbelanjaController::class, 'keranjangtambah']);
 Route::post('/keranjangbelanja/store', [keranjangbelanjaController::class, 'store']);
 Route::get('/keranjangbelanja/hapus/{id}', [keranjangbelanjaController::class, 'hapus']);
+Route::get('/keranjangbelanja/cari', [keranjangbelanjaController::class, 'cari']);
+
+
+// CRUD Karyawan - punya bara
+Route::get('/karyawan', [KaryawanController::class, 'index_5']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
+
+//keranjang belanja 2 - punya amel
+Route::get('/keranjangbelanja2', [KeranjangbelanjaController2::class, 'index']);
+Route::get('/keranjangbelanja2/beli', [KeranjangbelanjaController2::class, 'beli']);
+Route::post('/keranjangbelanja2/store', [KeranjangbelanjaController2::class, 'store']);
+Route::get('/keranjangbelanja2/batal/{id}', [KeranjangbelanjaController2::class, 'batal']);
+

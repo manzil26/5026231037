@@ -23,34 +23,40 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm p-3 w-100">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="frontend">All Front End</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/pegawai">Pegawai</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/penggaris">Tugas CRUD</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">EAS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/keranjangbelanja">Latihan 1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Latihan 2</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 3</a>
-            </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="frontend">All Front End</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pegawai">Pegawai</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/penggaris">Tugas CRUD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">EAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/keranjangbelanja">Latihan 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/karyawan">Latihan 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/keranjangbelanja2">Latihan 3</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
 
     <div class="jumbotron jumbotron-fluid"
-        style="background-image: url('material/bg-jumbotroon-frontend.png');
+        style="background-image: url('{{ asset('material/bg-jumbotroon-frontend.png') }}');
     background-size: cover;
     background-position: center;
     max-width: 100%;

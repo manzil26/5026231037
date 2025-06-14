@@ -14,7 +14,7 @@ class keranjangbelanjaController extends Controller
         $keranjangbelanja = DB::table('keranjangbelanja')->paginate(10);
         ;
         // menggirim data pke view index
-        return view('keranjangbelanja', ['keranjangbelanja' => $keranjangbelanja]);
+        return view('keranjang_belanja/keranjangbelanja', ['keranjangbelanja' => $keranjangbelanja]);
 
 
 
@@ -23,7 +23,7 @@ class keranjangbelanjaController extends Controller
     public function keranjangtambah()
     {
         // memanggil view tambah
-        return view('keranjang-tambah');
+        return view('keranjang_belanja/keranjang-tambah');
     }
     // method untuk insert data ke table
     public function store(Request $request)
@@ -48,5 +48,20 @@ class keranjangbelanjaController extends Controller
 
         // alihkan halaman ke halaman pegawai
         return redirect('/keranjangbelanja');
+    }
+
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+        $cari = $request->cari;
+
+        // mengambil data dari table karyawan sesuai pencarian data
+        $keranjangbelanja = DB::table('keranjangbelanja')
+            ->where('kodebarang', 'like', "%" . $cari . "%")
+            ->get();
+
+        // mengirim data karyawan ke view index
+        return view('keranjang_belanja/keranjang-tambah', ['keranjangbelanja' => $keranjangbelanja], ['cari' => $cari]);
+
     }
 }

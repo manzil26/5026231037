@@ -13,7 +13,7 @@ class PenggarisController extends Controller
         $penggaris = DB::table('penggaris')->paginate(10);
         ;
         // menggirim data penggaris ke view index
-        return view('penggaris', ['penggaris' => $penggaris]);
+        return view('data_penggaris/penggaris', ['penggaris' => $penggaris]);
 
 
 
@@ -21,7 +21,7 @@ class PenggarisController extends Controller
     public function tambah()
     {
         // memanggil view tambah
-        return view('penggaris-tambah');
+        return view('data_penggaris/penggaris-tambah');
     }
 
 
@@ -47,7 +47,7 @@ class PenggarisController extends Controller
         // mengambil data penggaris berdasarkan id yang dipilih
         $penggaris = DB::table('penggaris')->where('penggaris_id', $id)->get();
         // passing data peggaris yang didapat ke view penggaris-edit.blade.php
-        return view('penggaris-edit', ['penggaris' => $penggaris]);
+        return view('data_penggaris/penggaris-edit', ['penggaris' => $penggaris]);
 
     }
 
@@ -86,7 +86,7 @@ class PenggarisController extends Controller
             ->paginate();
 
         // mengirim data pegawai ke view index
-        return view('penggaris', ['penggaris' => $penggaris]);
+        return view('data_penggaris/penggaris', ['penggaris' => $penggaris]);
 
     }
 
