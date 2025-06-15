@@ -48,7 +48,7 @@
                     <a class="nav-link" href="/karyawan">Latihan 2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/keranjangbelanja2">Latihan 3</a>
+                    <a class="nav-link" href="/karyawan1">Latihan 3</a>
                 </li>
             </ul>
         </div>

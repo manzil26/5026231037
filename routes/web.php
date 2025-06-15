@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KaryawanController1;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
@@ -153,7 +154,7 @@ Route::get('/keranjangbelanja/hapus/{id}', [keranjangbelanjaController::class, '
 Route::get('/keranjangbelanja/cari', [keranjangbelanjaController::class, 'cari']);
 
 
-// CRUD Karyawan - punya bara
+// CRUD Karyawan - punya bara (genap)
 Route::get('/karyawan', [KaryawanController::class, 'index_5']);
 Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
 Route::post('/karyawan/store', [KaryawanController::class, 'store']);
@@ -165,4 +166,11 @@ Route::get('/keranjangbelanja2', [KeranjangbelanjaController2::class, 'index']);
 Route::get('/keranjangbelanja2/beli', [KeranjangbelanjaController2::class, 'beli']);
 Route::post('/keranjangbelanja2/store', [KeranjangbelanjaController2::class, 'store']);
 Route::get('/keranjangbelanja2/batal/{id}', [KeranjangbelanjaController2::class, 'batal']);
+
+// karyawan punya mario (ganjil)
+
+Route::get('/karyawan1', [KaryawanController1::class, 'index']);
+Route::get('/karyawan1/tambah', [KaryawanController1::class, 'tambah']);
+Route::post('/karyawan1/store', [KaryawanController1::class, 'store']);
+Route::get('/karyawan1/hapus/{kodepegawai}', [KaryawanController1::class, 'hapus']);
 

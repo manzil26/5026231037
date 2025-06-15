@@ -36,7 +36,7 @@ class KeranjangbelanjaController2 extends Controller
             'Harga' => $request->Harga
         ]);
         // alihkan halaman ke halaman
-        return redirect('/keranjangbelanja');
+        return redirect('/keranjangbelanja2');
 
     }
 
