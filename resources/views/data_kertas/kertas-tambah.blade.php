@@ -4,7 +4,7 @@
 
 
 
-    <a href="/penggaris" class="btn btn-info"> Kembali</a>
+    <a href="/kertas" class="btn btn-info"> Kembali</a>
 
     <br />
     <br />
@@ -14,12 +14,12 @@
             <h3>Data Kertas</h3>
         </div>
         <div class="card-body">
-            <form action="/penggaris/store" method="post">
+            <form action="/kertas/store" method="post">
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-3">
 
-                        Merek Penggaris
+                        Merek kertas
                     </div>
                     <div class="col-8">
                         <input class="form-control" type="text" required="required" name="nama"> <br />

@@ -8,9 +8,10 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\keranjangbelanjaController;
 use App\Http\Controllers\PenggarisController;
+use App\Http\Controllers\kertasController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\KeranjangbelanjaController2;
-
+use App\Http\Controllers\pageCounterController;
 
 
 // yang komen ini java
@@ -173,4 +174,18 @@ Route::get('/karyawan1', [KaryawanController1::class, 'index']);
 Route::get('/karyawan1/tambah', [KaryawanController1::class, 'tambah']);
 Route::post('/karyawan1/store', [KaryawanController1::class, 'store']);
 Route::get('/karyawan1/hapus/{kodepegawai}', [KaryawanController1::class, 'hapus']);
+
+
+// coba belajar
+Route::get('/latihan2', [pageCounterController::class, 'index']);
+
+//coba kertas (coba belajar )
+Route::get('/kertas', [kertasController::class, 'index_3']);
+Route::get('/kertas/kertas-tambah', [kertasController::class, 'tambah']);
+Route::post('/kertas/store', [kertasController::class, 'store']);
+Route::get('/kertas/kertas-edit/{kertas_id}', [kertasController::class, 'edit']);
+Route::post('/kertas/update', [kertasController::class, 'update']);
+Route::get('/kertas/hapus/{pegawai_id}', [kertasController::class, 'hapus']);
+Route::get('/kertas/cari', [kertasController::class, 'cari']);
+
 
