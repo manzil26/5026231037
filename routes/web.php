@@ -12,6 +12,7 @@ use App\Http\Controllers\kertasController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\KeranjangbelanjaController2;
 use App\Http\Controllers\pageCounterController;
+use App\Http\Controllers\mykaryawanController;
 
 
 // yang komen ini java
@@ -187,5 +188,14 @@ Route::get('/kertas/kertas-edit/{kertas_id}', [kertasController::class, 'edit'])
 Route::post('/kertas/update', [kertasController::class, 'update']);
 Route::get('/kertas/hapus/{pegawai_id}', [kertasController::class, 'hapus']);
 Route::get('/kertas/cari', [kertasController::class, 'cari']);
+
+
+//eas
+Route::get('/index_eas', [MyKaryawanController::class, 'index_4']);
+Route::post('/index_eas/store', [MyKaryawanController::class, 'store']);
+Route::get('/index_eas/edit/{kodepegawai}', [MyKaryawanController::class, 'edit']);
+Route::get('/index_eas/view/{kodepegawai}', [MyKaryawanController::class, 'view']);
+Route::post('/index_eas/update', [MyKaryawanController::class, 'update']);
+
 
 

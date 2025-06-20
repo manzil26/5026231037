@@ -22,5 +22,17 @@ class pageCounterController extends Controller
 
     }
 
+    //     public function index(){
+//     $counter = DB::table('pagecounter')->where('ID', 1)->first();
+//     $jumlahpengunjung = 0;
+//     if ($counter) {
+//         $newJumlah = $counter->Jumlah + 1;
+//         DB::table('pagecounter')->where('ID', 1)->update(['Jumlah' => $newJumlah]);
+//         $jumlahpengunjung = $newJumlah;
+//     }
+
+    //     return view('indexcounter', ['Jumlah' => $jumlahpengunjung]);
+// }
+
 }
 

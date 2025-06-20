@@ -11,7 +11,7 @@ class keranjangbelanjaController extends Controller
     public function index_4()
     {
         //mengambil data dari tabel
-        $keranjangbelanja = DB::table('keranjangbelanja')->paginate(10);
+        $keranjangbelanja = DB::table('keranjangbelanja')->get();
         ;
         // menggirim data pke view index
         return view('keranjang_belanja/keranjangbelanja', ['keranjangbelanja' => $keranjangbelanja]);
@@ -61,7 +61,9 @@ class keranjangbelanjaController extends Controller
             ->get();
 
         // mengirim data karyawan ke view index
-        return view('keranjang_belanja/keranjang-tambah', ['keranjangbelanja' => $keranjangbelanja], ['cari' => $cari]);
+        return view('keranjang_belanja/keranjangbelanja', ['keranjangbelanja' => $keranjangbelanja], ['cari' => $cari]);
 
     }
+
+
 }

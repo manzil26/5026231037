@@ -3,7 +3,7 @@
 @section('content')
     <h3>Data Keranjang Belanja</h3>
 
-    <form action="/karyawan/cari" method="GET">
+    <form action="/keranjangbelanja/cari" method="GET">
         <input type="text" class="form-control" name="cari" placeholder="Cari Kode Barang .." value="{{ $cari ?? '' }}">
         <br />
         <input type="submit" class="btn btn-info" value="CARI">
@@ -32,8 +32,9 @@
                     <td> {{ $k->id }}</td>
                     <td> {{ $k->kodebarang }}</td>
                     <td> {{ $k->jumlah }}</td>
-                    <td> RP. {{ $k->harga }}</td>
-                    <td> RP. {{ $k->jumlah * $k->harga }}</td>
+                    <td>Rp {{ number_format($k->harga, 0, ',', '.') }}</td>
+                    <td>Rp {{ number_format($k->jumlah * $k->harga, 0, ',', '.') }}</td>
+
                     <td>
 
                         <a href="/keranjangbelanja/hapus/{{ $k->id }}" class="btn btn-danger">Batal</a>
@@ -44,6 +45,4 @@
         </table>
 
     </div>
-
-    {{ $keranjangbelanja->links() }}
 @endsection
